@@ -22,6 +22,7 @@ import tools.vitruv.framework.vsum.internal.InternalVirtualModel;
 import tools.vitruv.testutils.DefaultVirtualModelBasedTestView;
 import tools.vitruv.testutils.VirtualModelBasedTestView;
 import tools.vitruv.testutils.views.UriMode;
+import tools.vitruv.change.propagation.ChangePropagationSpecification;
 
 public class ServerStarter {
 	private static Path path = Path.of("/test-me");

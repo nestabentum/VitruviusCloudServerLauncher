@@ -28,6 +28,7 @@ Require-Bundle: tools.vitruv.change.composite,
  tools.vitruv.testutils.source;bundle-version="3.0.1",
  tools.vitruv.testutils.vsum.source;bundle-version="3.0.1",
  tools.vitruv.framework.remote;bundle-version="3.0.1",
- tools.vitruv.change.propagation.source;bundle-version="3.0.1"
+ tools.vitruv.change.propagation.source;bundle-version="3.0.1",
+ org.eclipse.emf.ecore.edit;bundle-version="2.14.0"
 Automatic-Module-Name: VitruviusCloudServerLaunch
 Bundle-RequiredExecutionEnvironment: JavaSE-17
