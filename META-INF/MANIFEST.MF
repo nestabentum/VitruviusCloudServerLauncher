@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: VitruviusCloudServerLaunch
 Bundle-SymbolicName: VitruviusCloudServerLaunch
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.2
 Require-Bundle: tools.vitruv.change.composite,
  tools.vitruv.framework.vsum,
  org.eclipse.emf.ecore.xmi,
@@ -29,6 +29,8 @@ Require-Bundle: tools.vitruv.change.composite,
  tools.vitruv.testutils.vsum.source;bundle-version="3.0.1",
  tools.vitruv.framework.remote;bundle-version="3.0.1",
  tools.vitruv.change.propagation.source;bundle-version="3.0.1",
- org.eclipse.emf.ecore.edit;bundle-version="2.14.0"
+ org.eclipse.emf.ecore.edit;bundle-version="2.14.0",
+ tools.vitruv.change.changederivation;bundle-version="3.0.1",
+ tools.vitruv.change.correspondence.source;bundle-version="3.0.1"
 Automatic-Module-Name: VitruviusCloudServerLaunch
 Bundle-RequiredExecutionEnvironment: JavaSE-17

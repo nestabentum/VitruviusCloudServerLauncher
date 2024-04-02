@@ -6,10 +6,12 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 import edu.kit.ipd.sdq.metamodels.families.FamiliesPackage;
 import edu.kit.ipd.sdq.metamodels.persons.PersonsPackage;
+import tools.vitruv.change.correspondence.CorrespondencePackage;
 import tools.vitruv.change.interaction.UserInteractionFactory;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 import tools.vitruv.dsls.demo.familiespersons.families2persons.FamiliesToPersonsChangePropagationSpecification;
@@ -25,13 +27,24 @@ import tools.vitruv.testutils.views.UriMode;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 
 public class ServerStarter {
-	private static Path path = Path.of("/test-me");
+	private static Path path = Path.of("/cloud-vsum");
 	
+	private final static String familyViewType = "families";
+	private final static String personsViewType = "persons";
+
+	public ServerStarter() {
+		
+		EPackage.Registry.INSTANCE.put(FamiliesPackage.eNS_URI, FamiliesPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put(PersonsPackage.eNS_URI, PersonsPackage.eINSTANCE);
+		EPackage.Registry.INSTANCE.put(tools.vitruv.dsls.reactions.runtime.correspondence.CorrespondencePackage.eNS_URI,
+				tools.vitruv.dsls.reactions.runtime.correspondence.CorrespondencePackage.eINSTANCE);
+		this.testView = new DefaultVirtualModelBasedTestView(path, path, getChangePropagationSpecifications(),
+				UriMode.FILE_URIS);
+	}
 
 //	 TestView testView= ChangePublishingTestView.createDefaultChangePublishingTestView(path, getChangePropagationSpecifications());
 
-	VirtualModelBasedTestView testView = new DefaultVirtualModelBasedTestView(path, path,
-			getChangePropagationSpecifications(), UriMode.FILE_URIS);
+	final VirtualModelBasedTestView testView;
 
 	private static Iterable<ChangePropagationSpecification> getChangePropagationSpecifications() {
 		FamiliesToPersonsChangePropagationSpecification _familiesToPersonsChangePropagationSpecification = new FamiliesToPersonsChangePropagationSpecification();
@@ -42,14 +55,12 @@ public class ServerStarter {
 	}
 
 	public void startServer() throws IOException {
-		EPackage.Registry.INSTANCE.put(FamiliesPackage.eNS_URI, FamiliesPackage.eINSTANCE);
-		EPackage.Registry.INSTANCE.put(PersonsPackage.eNS_URI, PersonsPackage.eINSTANCE);
 
 		VitruvServer server;
-		var identityViewType = ViewTypeFactory.createIdentityMappingViewType("identity-mapping");
-		var dummyViewType1 = ViewTypeFactory.createIdentityMappingViewType("dummy 1");
-		var dummyViewType2 = ViewTypeFactory.createIdentityMappingViewType("dummy 2");
-		List<ViewType<?>> listviewTypes = List.of(identityViewType, dummyViewType1, dummyViewType2);
+		var identityViewType = ViewTypeFactory.createIdentityMappingViewType(familyViewType);
+		var dummyViewType1 = ViewTypeFactory.createIdentityMappingViewType(personsViewType);
+		//var dummyViewType2 = ViewTypeFactory.createIdentityMappingViewType("dummy 2");
+		List<ViewType<?>> listviewTypes = List.of(identityViewType, dummyViewType1);
 		server = new VitruvServer(() -> {
 			var vsumBuilder = new VirtualModelBuilder();
 			vsumBuilder.withStorageFolder(path);
@@ -57,12 +68,12 @@ public class ServerStarter {
 			vsumBuilder.withUserInteractor(UserInteractionFactory.instance.createUserInteractor(
 					UserInteractionFactory.instance.createPredefinedInteractionResultProvider(null)));
 			vsumBuilder.withViewTypes(listviewTypes);
-			InternalVirtualModel model = vsumBuilder.buildAndInitialize();
+			var model = vsumBuilder.buildAndInitialize();
 			model.createSelector(identityViewType);
 			return model;
 		}, 8069);
 
-		//ModelInitializer.createFamiliesModel(testView);
+		ModelInitializer.createFamiliesModel(testView);
 
 		server.start();
 
