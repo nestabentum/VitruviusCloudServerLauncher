@@ -1,29 +1,19 @@
 package edu.kit.ipd.sdq.vitruvius.cloud.server.launch;
 
 import java.nio.file.Path;
-import java.time.Instant;
-import java.util.Date;
-import java.util.List;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
-
 import edu.kit.ipd.sdq.metamodels.families.FamiliesFactory;
 import edu.kit.ipd.sdq.metamodels.families.Family;
 import edu.kit.ipd.sdq.metamodels.families.FamilyRegister;
 import edu.kit.ipd.sdq.metamodels.families.Member;
-import edu.kit.ipd.sdq.metamodels.persons.Person;
-import edu.kit.ipd.sdq.metamodels.persons.PersonRegister;
 import edu.kit.ipd.sdq.metamodels.persons.PersonsFactory;
 import tools.vitruv.testutils.views.TestView;
 
 public class ModelInitializer {
-	private static final Path PERSONS_MODEL = Path.of("model/persons.persons");
-
 	private static final Path FAMILIES_MODEL = Path.of("model/families1.families");
 
 	private static final String FIRST_DAD_1 = "Anton";

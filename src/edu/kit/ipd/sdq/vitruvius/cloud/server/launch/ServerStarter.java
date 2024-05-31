@@ -6,14 +6,11 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.change.ChangePackage;
-import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 import edu.kit.ipd.sdq.metamodels.families.FamiliesPackage;
 import edu.kit.ipd.sdq.metamodels.persons.PersonsPackage;
 import tools.vitruv.change.atomic.AtomicPackage;
-import tools.vitruv.change.correspondence.CorrespondencePackage;
 import tools.vitruv.change.interaction.UserInteractionFactory;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 import tools.vitruv.dsls.demo.familiespersons.families2persons.FamiliesToPersonsChangePropagationSpecification;
@@ -22,11 +19,9 @@ import tools.vitruv.framework.remote.server.VitruvServer;
 import tools.vitruv.framework.views.ViewType;
 import tools.vitruv.framework.views.ViewTypeFactory;
 import tools.vitruv.framework.vsum.VirtualModelBuilder;
-import tools.vitruv.framework.vsum.internal.InternalVirtualModel;
 import tools.vitruv.testutils.DefaultVirtualModelBasedTestView;
 import tools.vitruv.testutils.VirtualModelBasedTestView;
 import tools.vitruv.testutils.views.UriMode;
-import tools.vitruv.change.propagation.ChangePropagationSpecification;
 
 public class ServerStarter {
 	private static Path path = Path.of("/cloud-vsum");
@@ -76,7 +71,7 @@ public class ServerStarter {
 			return model;
 		}, 8069);
 
-		ModelInitializer.createFamiliesModel(testView);
+//ModelInitializer.createFamiliesModel(testView);
 
 		server.start();
 
