@@ -1,5 +1,6 @@
 FROM openjdk:17-jdk-slim
 
-COPY server.jar /home/test.jar
+COPY target/server.jar /home/test.jar
+COPY cloud-vsum /cloud-vsum
 
 CMD [ "java", "-jar", "/home/test.jar" ]
