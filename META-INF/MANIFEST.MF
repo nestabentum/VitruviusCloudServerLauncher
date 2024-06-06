@@ -1,6 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: edu.kit.ipd.sdq.vitruvius.cloud.server.launch.ServerLaunch
-Class-Path: tools.vitruv.testutils_3.0.1.202401160901.jar
 Bundle-ManifestVersion: 2
 Bundle-Name: VitruviusCloudServerLaunch
 Bundle-SymbolicName: VitruviusCloudServerLaunch;singleton:=true
@@ -20,7 +18,7 @@ Require-Bundle: tools.vitruv.change.composite,
  tools.vitruv.dsls.demo.familiespersons;bundle-version="3.0.1",
  tools.vitruv.change.propagation,
  org.eclipse.emf.transaction;bundle-version="1.9.2",
- edu.kit.ipd.sdq.metamodels.families;bundle-version="1.9.0.qualifier",
+ edu.kit.ipd.sdq.metamodels.families;bundle-version="1.9.0",
  tools.vitruv.testutils;bundle-version="3.0.1",
  tools.vitruv.testutils.metamodels;bundle-version="3.0.1",
  tools.vitruv.testutils.vsum;bundle-version="3.0.1",
