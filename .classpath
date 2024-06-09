@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-17.0.11">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
@@ -8,5 +8,8 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/tools.vitruv.framework.remote/target/tools.vitruv.framework.remote-3.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Users/nbe_adm/Documents/workspace/ma/Vitruv-Change/bundles/tools.vitruv.change.changederivation/target/tools.vitruv.change.changederivation-3.0.1-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/nbe_adm/Documents/workspace/ma/Vitruv-Change/bundles/tools.vitruv.change.propagation/target/tools.vitruv.change.propagation-3.0.1-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/nbe_adm/Documents/workspace/ma/Vitruv-Change/bundles/tools.vitruv.change.composite/target/tools.vitruv.change.composite-3.0.1-SNAPSHOT-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
