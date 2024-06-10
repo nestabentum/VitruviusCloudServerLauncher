@@ -5,59 +5,35 @@
     <rightEObjects href="../model/families1.families#0"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0/@sons.0"/>
+    <leftEObjects href="../model/families1.families#5"/>
     <rightEObjects href="../model/persons.persons#//@persons.0"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
     <leftEObjects href="../model/persons.persons#//@persons.0"/>
-    <rightEObjects href="../model/families1.families#//@families.0"/>
+    <rightEObjects href="../model/families1.families#1"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#s"/>
+    <leftEObjects href="../model/families1.families#4"/>
     <rightEObjects href="../model/persons.persons#//@persons.1"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
     <leftEObjects href="../model/persons.persons#//@persons.1"/>
-    <rightEObjects href="../model/families1.families#//@families.0"/>
+    <rightEObjects href="../model/families1.families#1"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#hii"/>
+    <leftEObjects href="../model/families1.families#2"/>
     <rightEObjects href="../model/persons.persons#//@persons.2"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0"/>
+    <leftEObjects href="../model/families1.families#1"/>
     <rightEObjects href="../model/persons.persons#//@persons.2"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0/@mother"/>
+    <leftEObjects href="../model/families1.families#3"/>
     <rightEObjects href="../model/persons.persons#//@persons.3"/>
   </correspondences>
   <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0"/>
+    <leftEObjects href="../model/families1.families#1"/>
     <rightEObjects href="../model/persons.persons#//@persons.3"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0/@sons.1"/>
-    <rightEObjects href="../model/persons.persons#//@persons.4"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/persons.persons#//@persons.4"/>
-    <rightEObjects href="../model/families1.families#//@families.0"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0/@sons.2"/>
-    <rightEObjects href="../model/persons.persons#//@persons.5"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/persons.persons#//@persons.5"/>
-    <rightEObjects href="../model/families1.families#//@families.0"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/families1.families#//@families.0/@sons.3"/>
-    <rightEObjects href="../model/persons.persons#//@persons.6"/>
-  </correspondences>
-  <correspondences xsi:type="correspondence_1:ReactionsCorrespondence" tag="">
-    <leftEObjects href="../model/persons.persons#//@persons.6"/>
-    <rightEObjects href="../model/families1.families#//@families.0"/>
   </correspondences>
 </correspondence:Correspondences>

@@ -42,6 +42,7 @@ public class ModelInitializer {
 			familyRegister.setId(getId());
 			Family family = FamiliesFactory.eINSTANCE.createFamily();
 			PersonsFactory.eINSTANCE.createFemale();
+			family.setId(getId());
 			family.setLastName(LAST_NAME);
 			family.setFather(createMember(FIRST_DAD_1));
 			family.setMother(createMember(FIRST_MOM_1));
@@ -72,6 +73,7 @@ public class ModelInitializer {
 	private static Member createMember(String name) {
 		Member member = FamiliesFactory.eINSTANCE.createMember();
 		member.setFirstName(name);
+		member.setId(getId());
 		return member;
 	}
 

@@ -24,7 +24,7 @@ import tools.vitruv.testutils.VirtualModelBasedTestView;
 import tools.vitruv.testutils.views.UriMode;
 
 public class ServerStarter {
-	private static Path path = Path.of("/cloud-vsum");
+	private static Path path = Path.of("/test-vsum");
 	
 	private final static String familyViewType = "families";
 	private final static String personsViewType = "persons";
@@ -71,7 +71,7 @@ public class ServerStarter {
 			return model;
 		}, 8069);
 
-//ModelInitializer.createFamiliesModel(testView);
+ModelInitializer.createFamiliesModel(testView);
 
 		server.start();
 
